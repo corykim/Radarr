@@ -14,6 +14,8 @@ import EditMovieModalConnector from 'Movie/Edit/EditMovieModalConnector';
 import DeleteMovieModal from 'Movie/Delete/DeleteMovieModal';
 import MovieStatusCell from './MovieStatusCell';
 import MovieStatusConnector from 'Movie/MovieStatusConnector';
+import JustwatchLinksCell from './JustwatchLinksCell';
+import JustwatchLinksConnector from 'Movie/JustwatchLinksConnector';
 import VirtualTableSelectCell from 'Components/Table/Cells/VirtualTableSelectCell';
 import styles from './MovieIndexRow.css';
 
@@ -69,6 +71,11 @@ class MovieIndexRow extends Component {
       studio,
       qualityProfile,
       added,
+      justwatchUrl,
+      netflixUrl,
+      primeVideoUrl,
+      tubiTVUrl,
+      hooplaUrl,
       inCinemas,
       physicalRelease,
       minimumAvailability,
@@ -127,6 +134,20 @@ class MovieIndexRow extends Component {
                   className={styles[name]}
                   monitored={monitored}
                   status={status}
+                  component={VirtualTableRowCell}
+                />
+              );
+            }
+
+            if (name === 'justwatchLinks') {
+              return (
+                <JustwatchLinksCell
+                  justwatchUrl = {justwatchUrl}
+				          netflixUrl = {netflixUrl}
+				          primeVideoUrl = {primeVideoUrl}
+				          tubiTVUrl = {tubiTVUrl}
+				          hooplaUrl = {hooplaUrl}
+                  className={styles[name]}
                   component={VirtualTableRowCell}
                 />
               );
@@ -374,6 +395,11 @@ MovieIndexRow.propTypes = {
   collection: PropTypes.object,
   qualityProfile: PropTypes.object.isRequired,
   added: PropTypes.string,
+  justwatchUrl: PropTypes.string,
+  netflixUrl: PropTypes.string,
+  primeVideoUrl: PropTypes.string,
+  tubiTVUrl: PropTypes.string,
+  hooplaUrl: PropTypes.string,
   inCinemas: PropTypes.string,
   physicalRelease: PropTypes.string,
   minimumAvailability: PropTypes.string.isRequired,
