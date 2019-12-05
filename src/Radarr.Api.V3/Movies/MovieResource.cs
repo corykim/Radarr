@@ -42,6 +42,13 @@ namespace Radarr.Api.V3.Movies
         public string YouTubeTrailerId { get; set; }
         public string Studio { get; set; }
 
+        //Justwatch Support
+        public string NetflixUrl { get; set; }
+        public string PrimeVideoUrl { get; set; }
+        public string HooplaUrl { get; set; }
+        public string TubiTVUrl { get; set; }
+        public string JustwatchUrl { get; set; }
+
         //View & Edit
         public string Path { get; set; }
         public int QualityProfileId { get; set; }
@@ -129,6 +136,11 @@ namespace Radarr.Api.V3.Movies
                 MovieFile = movieFile,
                 YouTubeTrailerId = model.YouTubeTrailerId,
                 Studio = model.Studio,
+                NetflixUrl = model.NetflixUrl,
+                JustwatchUrl = model.JustwatchUrl,
+                HooplaUrl = model.HooplaUrl,
+                TubiTVUrl = model.TubiTVUrl,
+                PrimeVideoUrl = model.PrimeVideoUrl,
                 Collection = model.Collection
             };
         }
@@ -189,7 +201,12 @@ namespace Radarr.Api.V3.Movies
                 Ratings = model.Ratings,
                 MovieFile = movieFile,
                 YouTubeTrailerId = model.YouTubeTrailerId,
-                Studio = model.Studio
+                Studio = model.Studio,
+                NetflixUrl = model.NetflixUrl,
+                JustwatchUrl = model.JustwatchUrl,
+                HooplaUrl = model.HooplaUrl,
+                TubiTVUrl = model.TubiTVUrl,
+                PrimeVideoUrl = model.PrimeVideoUrl
             };
         }
 
@@ -239,7 +256,12 @@ namespace Radarr.Api.V3.Movies
                 AddOptions = resource.AddOptions,
                 Ratings = resource.Ratings,
                 YouTubeTrailerId = resource.YouTubeTrailerId,
-                Studio = resource.Studio
+                Studio = resource.Studio,
+                NetflixUrl = resource.NetflixUrl,
+                JustwatchUrl = resource.JustwatchUrl,
+                HooplaUrl = resource.HooplaUrl,
+                TubiTVUrl = resource.TubiTVUrl,
+                PrimeVideoUrl = resource.PrimeVideoUrl
             };
         }
 
