@@ -10,7 +10,6 @@ import styles from './MovieStatus.css';
 
 function MovieStatus(props) {
   const {
-    inCinemas,
     isAvailable,
     monitored,
     grabbed,
@@ -74,22 +73,11 @@ function MovieStatus(props) {
     );
   }
 
-  if (!inCinemas) {
-    return (
-      <div className={styles.center}>
-        <Icon
-          name={icons.TBA}
-          title="TBA"
-        />
-      </div>
-    );
-  }
-
   if (!monitored) {
     return (
       <div className={styles.center}>
         <Label
-          title="Announced"
+          title="Not Monitored"
           kind={kinds.WARNING}
         >
           Not Monitored
@@ -114,7 +102,7 @@ function MovieStatus(props) {
   return (
     <div className={styles.center}>
       <Label
-        title="Announced"
+        title="Not Available"
         kind={kinds.INFO}
       >
         Not Available
@@ -124,7 +112,6 @@ function MovieStatus(props) {
 }
 
 MovieStatus.propTypes = {
-  inCinemas: PropTypes.string,
   isAvailable: PropTypes.bool,
   monitored: PropTypes.bool.isRequired,
   grabbed: PropTypes.bool,
