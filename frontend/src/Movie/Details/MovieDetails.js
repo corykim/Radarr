@@ -170,6 +170,11 @@ class MovieDetails extends Component {
       collection,
       overview,
       youTubeTrailerId,
+      justwatchUrl,
+      netflixUrl,
+      primeVideoUrl,
+      tubiTVUrl,
+      hooplaUrl,
       inCinemas,
       images,
       alternateTitles,
@@ -454,6 +459,11 @@ class MovieDetails extends Component {
                         tmdbId={tmdbId}
                         imdbId={imdbId}
                         youTubeTrailerId={youTubeTrailerId}
+                        justwatchUrl={justwatchUrl}
+                        netflixUrl={netflixUrl}
+                        primeVideoUrl={primeVideoUrl}
+                        tubiTVUrl={tubiTVUrl}
+                        hooplaUrl={hooplaUrl}
                       />
                     }
                   </span>
@@ -617,6 +627,11 @@ MovieDetails.propTypes = {
   studio: PropTypes.string,
   collection: PropTypes.object,
   youTubeTrailerId: PropTypes.string,
+  justwatchUrl: PropTypes.string,
+  netflixUrl: PropTypes.string,
+  primeVideoUrl: PropTypes.string,
+  tubiTVUrl: PropTypes.string,
+  hooplaUrl: PropTypes.string,
   inCinemas: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
   images: PropTypes.arrayOf(PropTypes.object).isRequired,
